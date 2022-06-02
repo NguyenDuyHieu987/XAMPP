@@ -1,0 +1,47 @@
+.episodes {
+    margin-top: 20px;
+    color: #fff;
+}
+
+.episodes h3 {
+    margin-bottom: 10px;
+}
+
+.episodes_wrapper {
+    background-color: #00233a;
+    padding: 3px 15px 8px 15px;
+}
+
+.episodes_list {
+    list-style: none;
+    overflow: hidden;
+}
+
+.episodes_list li.episode {
+    float: left;
+}
+
+.episodes_list li {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.episodes_list li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    white-space: nowrap;
+    padding: 5px 13px;
+    background-color: #091724;
+    transition: all 0.25s ease;
+}
+
+.episodes_list .episode.active a {
+    background-color: #eb3349;
+}
+
+.episodes_list .episode:not(.active) a:hover {
+    color: #eb3349;
+    background-color: #000000;
+    transition: 0s;
+}

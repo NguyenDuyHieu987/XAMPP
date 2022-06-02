@@ -1,0 +1,123 @@
+.filter_film {
+    position: relative;
+    margin-top: 10px;
+    width: 100%;
+}
+
+.filter_film_container {
+    position: relative;
+    padding: 10px 0px;
+}
+
+.filter_film_title {
+    user-select: none;
+    float: right;
+    cursor: pointer;
+    margin-bottom: 5px;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #006eff, #00cdd4);
+}
+
+.filter_film_title::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background-image: linear-gradient(to right, #005bd1, #00d7df, #005bd1);
+}
+
+.filter_film_title i,
+.filter_film_title svg {
+    margin-left: 5px;
+}
+
+.filter_film_title h3 {
+    display: inline-block;
+}
+
+.filter_film_body {
+    position: relative;
+    display: flex;
+    clear: both;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+    background-color: #091724;
+    transition: all 0.3s ease;
+}
+
+.filter_film_body.active {
+    position: relative;
+    opacity: 1;
+    height: 53px;
+    overflow: visible;
+    transition: all 0.3s ease;
+}
+
+.filter_film_content {
+    margin-left: auto;
+    padding: 10px;
+}
+
+.filter_film_content li {
+    list-style-type: none;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.filter_film_content li select,
+.filter_film_content .submit_filter {
+    color: white;
+    outline: none;
+    padding: 7px 7px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right, #000d31, #00686b);
+    border: 1px solid #5e5e5e;
+}
+
+.filter_film_content li select:hover {
+    background-image: linear-gradient(to right, #00081d, #00393b);
+}
+
+.filter_film_content .submit_filter {
+    padding: 7px 15px;
+    cursor: pointer;
+    background-image: linear-gradient(to right, #c9003c, #d4bf00);
+}
+
+.filter_film_content .submit_filter:hover {
+    background-image: linear-gradient(to right, #410013, #002e30);
+}
+
+@media only screen and (max-width: 1200px) {
+    .filter_film_content {
+        padding-left: 0px;
+    }
+    .filter_film_content li {
+        margin-bottom: 10px;
+    }
+    .filter_film_body.active {
+        height: 96px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .filter_film_body.active {
+        height: 309px;
+    }
+    .filter_film_content li,
+    .filter_film_content li select {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .filter_film_content {
+        padding-bottom: 10px;
+    }
+    .submit_filter {
+        display: block;
+        margin: 0px auto;
+    }
+}

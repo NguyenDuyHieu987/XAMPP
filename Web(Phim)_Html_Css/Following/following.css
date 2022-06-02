@@ -1,0 +1,198 @@
+.following {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    column-gap: 10px;
+    margin-top: 20px;
+}
+
+
+/* main content */
+
+.following .following_main_content {
+    width: 71%;
+    background: none;
+}
+
+.following_main_content {
+    display: block;
+    position: relative;
+}
+
+.following_main_content .main_movies_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.remove_all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    background: linear-gradient(to right, #00ffbf, #005485);
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.remove_all>span {
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 25px;
+    white-space: nowrap;
+    background-color: #091724;
+    font-size: 14px;
+    transition: all 0.5s ease-in-out;
+}
+
+.remove_all>span .fa-trash-can {
+    margin-right: 3px;
+}
+
+.remove_all:hover {
+    background: linear-gradient(to right, #ff008c, #ff0000);
+}
+
+.remove_all:hover span {
+    color: #c9003c;
+}
+
+.following_main_content .main_movies {
+    padding: 10px;
+    background-color: #091724;
+}
+
+.following_main_content .main_movies_container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, auto));
+    margin-top: 10px;
+    gap: 10px;
+    background-color: #091724;
+}
+
+
+/* history watched */
+
+.history_watched {}
+
+.history_watched_main_movies {
+    padding: 10px;
+    background-color: #091724;
+    min-height: 100px;
+    margin-bottom: 10px;
+    width: 332px;
+    transition: all 0.3s ease;
+}
+
+.history_watched_main_movies .main_movies_title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.history_watched_container .rightside_movies_container.day,
+.history_watched_container .rightside_movies_container.week,
+.history_watched_container .rightside_movies_container.month,
+.history_watched_container .rightside_movies_container.all {
+    max-height: 650px;
+    overflow-y: scroll;
+}
+
+.history_watched_main_movies .main_movies_title .fa-clock-rotate-left {
+    color: rgb(226, 34, 0);
+    margin-right: 10px;
+}
+
+.view_all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1px;
+    background: linear-gradient(to right, #c9003c, #d4bf00);
+    border-radius: 25px;
+}
+
+.view_all>a {
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
+    border-radius: 25px;
+    white-space: nowrap;
+    background-color: #091724;
+    font-size: 14px;
+    transition: all 0.5s ease-in-out;
+}
+
+.view_all:hover {
+    background: linear-gradient(to right, #00ffbf, #005485);
+}
+
+.view_all:hover a {
+    color: #11e4af;
+}
+
+.history_watched_body {
+    margin-top: 20px;
+    max-height: 360px;
+    overflow-y: scroll;
+}
+
+.following .rightside_box_movie .remove_history {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-30%);
+    font-size: 16px;
+    color: rgb(0, 63, 114);
+    transition: all 0.25s ease;
+    z-index: 2;
+    white-space: nowrap;
+    user-select: none;
+    cursor: pointer;
+}
+
+.following .remove_history:hover,
+.following .remove_follow:hover {
+    color: red;
+}
+
+.remove_follow .x-mark {
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.box_movie .remove_follow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 0px;
+    cursor: pointer;
+    user-select: none;
+    background: linear-gradient(to right, #070707, #001a2c, #070707);
+    color: rgb(253, 116, 98);
+}
+
+@media only screen and (max-width: 1100px) {
+    .history_watched_main_movies {
+        width: 282px;
+    }
+}
+
+@media only screen and (max-width: 670px) {
+    .following {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .following .following_main_content {
+        width: 100%;
+    }
+    .history_watched_main_movies {
+        width: 100% !important;
+    }
+}

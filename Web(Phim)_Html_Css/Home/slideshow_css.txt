@@ -1,0 +1,254 @@
+
+
+
+/* slide movies */
+
+.slide_show_movies {
+    display: block;
+    position: relative;
+    background-color: #091724;
+    padding: 10px;
+    margin: 0px -10px;
+}
+
+.slide_show_container {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+
+.my_movies {
+    display: block;
+    position: relative;
+    transform: translate3d(0px, 0px, 0px);
+    backface-visibility: hidden;
+    width: 4195px;
+    overflow: hidden;
+    margin-top: -10px;
+    padding-top: 10px;
+    transition: all 0.5s ease;
+}
+
+.item {
+    display: block;
+    position: relative;
+    backface-visibility: hidden;
+    float: left;
+    width: 220px;
+}
+
+@media only screen and (max-width: 1176px) {
+    .slide_show_movies .item {}
+}
+
+.slide_show_movies .thumbnail {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    color: white;
+    cursor: pointer;
+    margin-right: 7px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.thumbnail:hover {
+    filter: drop-shadow(0px 6px 3px rgb(1, 42, 53));
+    transform: translateY(-7px);
+}
+
+.thumbnail:hover img {
+    opacity: 0.3;
+    transform: scale(1.1);
+}
+
+.slide_show_movies .thumbnail img {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 280px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    transition: all 0.5s ease;
+}
+
+.item_info {
+    position: relative;
+    display: block;
+    text-align: left;
+    z-index: 1;
+    padding: 3px 10px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    background: linear-gradient(to right, #070707, #03121b, #070707);
+}
+
+.thumbnail .item_info .title_film,
+.thumbnail .item_info .release_year {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.thumbnail .item_info .title_film:hover,
+.thumbnail .item_info .release_year:hover {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: linear-gradient(to right, rgb(85, 2, 19), rgb(255, 0, 0));
+}
+
+
+/* .thumbnail .icon_play {
+    background-image: linear-gradient(to right, rgb(61, 2, 14), rgb(255, 0, 0));
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -45px;
+    margin-left: -25px;
+    transform: scale(1.5);
+    border-radius: 50%;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.thumbnail .icon_play:after {
+    content: "";
+    position: absolute;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    border: 15px solid transparent;
+    border-left: 20px solid rgb(78, 0, 0);
+    margin-top: -15px;
+    margin-left: -7px;
+    transition: all 0.5s ease;
+}
+
+.thumbnail:hover .icon_play {
+    opacity: 0.7;
+    transform: scale(1);
+}
+
+.thumbnail:hover .icon_play:after {
+    opacity: 1;
+}
+
+.thumbnail .icon_play:hover {
+    transform: scale(1.3);
+} */
+
+.thumbnail .icon_play_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -40px;
+    margin-left: -25px;
+    opacity: 0;
+    transform: scale(1.5);
+    border-radius: 50%;
+    background-image: linear-gradient(to right, rgb(61, 2, 14), rgb(255, 0, 0));
+    transition: all 0.5s ease;
+}
+
+.thumbnail .icon_play_wrapper svg,
+.thumbnail .icon_play_wrapper i {
+    position: absolute;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 4px;
+    opacity: 0;
+    filter: invert(100%);
+    color: rgb(1, 39, 66);
+    transition: all 0.5s ease;
+}
+
+.thumbnail:hover svg,
+.thumbnail:hover i {
+    opacity: 1;
+}
+
+.thumbnail:hover .icon_play_wrapper {
+    transform: scale(1);
+    opacity: 0.7;
+}
+
+.item_info .resolution {
+    position: absolute;
+    line-height: 35px;
+    font-size: 13px;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: linear-gradient(to right, rgb(75, 2, 17, 0.7), rgb(157, 3, 3, 0.7));
+}
+
+.thumbnail:hover .resolution {
+    opacity: 1;
+}
+
+.thumbnail .resolution,
+.thumbnail .duration {
+    padding: 0px 5px;
+}
+
+.thumbnail .duration {
+    position: absolute;
+    line-height: 35px;
+    font-size: 13px;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: linear-gradient(to right, rgb(157, 3, 3, 0.7), rgb(75, 2, 17, 0.7));
+}
+
+.thumbnail:hover .duration {
+    opacity: 1;
+}
+
+.thumbnail .icon_play_wrapper:hover {
+    transform: scale(1.25);
+}
+
+.prev {
+    position: absolute;
+    border: none;
+    background: none;
+    left: 0;
+    top: 50%;
+    z-index: 111;
+    transform: translateY(-85%);
+    color: rgba(214, 1, 12, 0.5);
+    margin-left: 10px;
+}
+
+.next {
+    position: absolute;
+    border: none;
+    background: none;
+    right: 0;
+    top: 50%;
+    z-index: 111;
+    transform: translateY(-85%);
+    color: rgba(214, 1, 12, 0.5);
+    margin-right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    color: rgb(245, 4, 4);
+}

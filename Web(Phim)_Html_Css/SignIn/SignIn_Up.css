@@ -1,0 +1,197 @@
+/* form Sign In, form Sign Up  */
+
+.signIn_content_container,
+.signUp_content_container {
+    margin-top: 10px;
+}
+
+.form_signIn_mobile,
+.form_signUp_mobile {
+    display: block;
+    margin: 0px auto;
+    position: relative;
+    width: 70%;
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(17, 39, 51, 0.8), rgba(0, 0, 0, 0.8));
+}
+
+@media only screen and (max-width: 700px) {
+    .form_signIn_mobile,
+    .form_signUp_mobile {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .form_signIn_body_mobile,
+    .form_signUp_body_mobile {
+        padding: 50px 30px !important;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.form_signIn_mobile a,
+.form_signUp_mobile a {
+    text-decoration: none;
+    color: rgb(226, 0, 0);
+    font-weight: bold;
+}
+
+.form_signIn_body_mobile,
+.form_signUp_body_mobile {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px 100px;
+}
+
+.form_signIn_body_mobile i,
+.form_signIn_body_mobile svg,
+.form_signUp_body_mobile i,
+.form_signUp_body_mobile svg {
+    cursor: pointer;
+}
+
+.form_signIn_body_mobile h2,
+.form_signUp_body_mobile h2 {
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 50px;
+    color: rgb(226, 0, 0);
+}
+
+.form_signIn_body_mobile label,
+.form_signUp_body_mobile label {
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.signIn_wrapper_mobile,
+.signUp_wrapper_mobile {
+    border: 1px solid rgb(175, 175, 175);
+    margin: 3px 0px 15px 0px;
+    display: flex;
+}
+
+.signIn_wrapper_mobile:hover,
+.signUp_wrapper_mobile:hover {
+    border: 1px solid rgb(226, 0, 0);
+}
+
+.submit_signIn_mobile,
+.submit_signUp_mobile {
+    padding: 10px 10px;
+    width: 100%;
+    background-color: rgb(0, 64, 143);
+    border: 1px solid rgb(175, 175, 175, 0.7);
+    margin-top: 30px;
+    color: rgb(226, 0, 0);
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.signIn_content_mobile,
+.signUp_content_mobile {
+    display: block;
+    width: 100%;
+}
+
+.group_input_email_signin_mobile,
+.group_input_password_signin_mobile,
+.group_input_username_signup_mobile,
+.group_input_email_signup_mobile,
+.group_input_password_signup_mobile {
+    border: none;
+    outline: none;
+    background: none;
+    height: 40px;
+    flex-grow: 1;
+    padding-left: 10px;
+}
+
+.form_signIn_body_mobile .fa-lock,
+.form_signIn_body_mobile .fa-at,
+.form_signIn_body_mobile .fa-user,
+.form_signUp_body_mobile .fa-lock,
+.form_signUp_body_mobile .fa-at,
+.form_signUp_body_mobile .fa-user {
+    padding-top: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.form_signIn_body_mobile .fa-eye,
+.form_signIn_body_mobile .fa-eye-slash,
+.form_signUp_body_mobile .fa-eye,
+.form_signUp_body_mobile .fa-eye-slash {
+    padding-top: 11px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.submit_signIn_mobile:hover,
+.signIn_facebook_mobile a:hover,
+.signIn_google_mobile a:hover,
+.submit_signUp_mobile:hover,
+.signUp_facebook_mobile a:hover,
+.signUp_google_mobile a:hover {
+    background-color: rgb(0, 33, 73);
+    color: rgb(226, 0, 0);
+}
+
+.notity_signIn_mobile,
+.notity_signUp_mobile {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.notity_signIn_mobile a:hover,
+.notity_signUp_mobile a:hover {
+    color: rgb(0, 150, 112);
+}
+
+.signIn_google_mobile,
+.signIn_facebook_mobile,
+.signUp_google_mobile,
+.signUp_facebook_mobile {
+    display: flex;
+}
+
+.signIn_facebook_mobile a,
+.signUp_facebook_mobile a {
+    padding: 10px 10px;
+    width: 100%;
+    background-color: rgb(0, 64, 143);
+    border: 1px solid rgb(175, 175, 175, 0.7);
+    margin-top: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    flex-grow: 1;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
+
+.signIn_facebook_mobile a .fa-facebook-f,
+.signIn_google_mobile a .fa-google,
+.signUp_facebook_mobile a .fa-facebook-f,
+.signUp_google_mobile a .fa-google {
+    float: left;
+    margin-top: 2px;
+}
+
+.signIn_google_mobile a,
+.signUp_google_mobile a {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: rgb(167, 0, 0);
+    border: 1px solid rgb(175, 175, 175, 0.7);
+    margin-top: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    flex-grow: 1;
+    color: white;
+    font-weight: normal;
+    text-align: center;
+}
